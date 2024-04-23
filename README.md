@@ -41,16 +41,16 @@ uv pip sync requirements.txt
 To start a local copy of the app on port `3000`:
 
 ```shell
-npm start
+uvicorn main:app --reload
 ```
 
 ### 🧪 Test
 
-<PENDING>
+<strong>PENDING</strong>
 
 ### 📦 Docker builds
 
-<PENDING>
+<strong>PENDING</strong>
 
 ### 🎨 Code linting
 
@@ -66,7 +66,7 @@ ruff format
 
 ### 🚀 Production deployment
 
-<PENDING>
+<strong>PENDING</strong>
 
 ### 💾 Database
 
@@ -74,7 +74,7 @@ This project uses data from [palestine-datasets](https://github.com/TechForPales
 
 ## 🤝 Contributing
 
-<PENDING>
+<strong>PENDING</strong>
 
 ## 🍕 Community
 
@@ -82,4 +82,4 @@ Got Questions? Join the conversation in our [Discord](https://discord.gg/jkUqTYv
 
 ## ⚖️ LICENSE
 
-MIT © [Open Sauced](LICENSE)
+MIT © [palestine-api](LICENSE)
