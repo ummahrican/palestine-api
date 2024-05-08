@@ -1,11 +1,15 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
+
 import requests
 
 app = FastAPI()
+favicon_path = "favicon.ico"
 
-casualties_url = "https://raw.githubusercontent.com/TechForPalestine/palestine-datasets/b0328917f163c55fb03de6184395bafdd22b35ec/casualties_daily.min.json"
-killed_url = "https://raw.githubusercontent.com/TechForPalestine/palestine-datasets/b0328917f163c55fb03de6184395bafdd22b35ec/killed-in-gaza.min.json"
-westbank_url = "https://raw.githubusercontent.com/TechForPalestine/palestine-datasets/b0328917f163c55fb03de6184395bafdd22b35ec/west_bank_daily.min.json"
+
+casualties_url = "https://data.techforpalestine.org/api/v2/casualties_daily.min.json"
+killed_url = "https://data.techforpalestine.org/api/v2/killed-in-gaza.min.json"
+westbank_url = "https://data.techforpalestine.org/api/v2/west_bank_daily.min.json"
 
 casualties_csv = requests.get(casualties_url).json()
 killed_csv = requests.get(killed_url).json()
@@ -30,3 +34,8 @@ async def casualties(limit: int | None = None):
 @app.get("/westbank")
 async def westbank(limit: int | None = None):
     return westbank_csv[0:limit]
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return FileResponse(favicon_path)
