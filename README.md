@@ -8,9 +8,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Dependabot-active-brightgreen.svg" alt="Dependabot Badge">
   <img src="https://img.shields.io/github/languages/code-size/ummahrican/palestine-api" alt="GitHub code size in bytes">
-  <!-- <a href="https://discord.gg/jkUqTYvd2s">
-    <img src="https://img.shields.io/discord/714698561081704529.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" alt="Discord">
-  </a> -->
 </p>
 
 palestine-api is a simple Fastapi integrated with [palestine-datasets](https://github.com/TechForPalestine/palestine-datasets/tree/main). The main purpose is to make a quick and simple API for requesting the latest data available from palestine-datasets.
