@@ -23,22 +23,13 @@ Install uv following the [offical repo](https://github.com/astral-sh/uv?tab=read
 To install the application:
 
 ```shell
-uv venv
-source .venv/bin/activate
-uv pip sync requirements.txt
-```
-
-Windows:
-```shell
-uv venv
-.venv\Scripts\activate
-uv pip sync requirements.txt
+uv sync --frozen --no-cache
 ```
 
 To start a local copy of the app on port `3000`:
 
 ```shell
-uvicorn main:app --reload
+uv run fastapi dev
 ```
 
 ### 🧪 Test
@@ -47,7 +38,15 @@ uvicorn main:app --reload
 
 ### 📦 Docker builds
 
-<strong>PENDING</strong>
+Simply build the dockerfile in your prefered architecture with (select arch with --platform= otherwise it defaults to your system):
+```shell
+docker build -t palestine-api-local .
+```
+
+Then run it!
+```shell
+docker run -d -p 80:80 palestine-api-local
+```
 
 ### 🎨 Code linting
 
@@ -55,10 +54,10 @@ To check the code and styles quality, use the following command:
 
 ```shell
 # Lint your code
-ruff check
+uvx ruff check
 
 # Format your code
-ruff format
+uvx ruff format
 ```
 
 ### 🚀 Production deployment
