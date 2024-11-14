@@ -33,8 +33,11 @@ uv run fastapi dev
 ```
 
 ### 🧪 Test
-
-<strong>PENDING</strong>
+This project uses pytest for test discovery. Simply run:
+```shell
+pytest
+```
+test_FILENAME.py will be auto discovered and tests will run
 
 ### 📦 Docker builds
 
