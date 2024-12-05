@@ -1,4 +1,4 @@
-FROM python:3.14-rc-slim
+FROM python:3.12.8-alpine3.20
 
 # Install uv.
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
