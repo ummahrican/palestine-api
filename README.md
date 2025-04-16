@@ -32,27 +32,32 @@ To start a local copy of the app on port `3000`:
 uv run fastapi dev
 ```
 
-To upgrade packages to latest version for maintence:
+To upgrade packages to latest version for maintenance:
 
 ```shell
 uv sync --upgrade
 ```
 
 ### 🧪 Test
+
 This project uses pytest for test discovery. Simply run:
+
 ```shell
 pytest
 ```
+
 test_FILENAME.py will be auto discovered and tests will run
 
 ### 📦 Docker builds
 
 Simply build the dockerfile in your prefered architecture with (select arch with --platform= otherwise it defaults to your system):
+
 ```shell
 docker build -t palestine-api-local .
 ```
 
 Then run it!
+
 ```shell
 docker run -d -p 80:80 palestine-api-local
 ```
@@ -83,7 +88,7 @@ This project uses data from [palestine-datasets](https://github.com/TechForPales
 
 ## 🍕 Community
 
-Got Questions? Join the conversation in our [Discord](https://discord.gg/jkUqTYvd2s).  
+Got Questions? Join the conversation in our [Discord](https://discord.gg/jkUqTYvd2s).
 
 ## ⚖️ LICENSE
 
